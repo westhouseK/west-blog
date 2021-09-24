@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { client } from "../libs/client";
 import { GetStaticProps, NextPage } from "next";
-import Layout from "../components/Layout";
 
 type DefalultResponceType = {
   createdAt: string,
@@ -28,24 +27,22 @@ type Responce = {
   limit: number
 }
 
-const Home: NextPage<Props> = ({blogs}) => {
+const BlogList: NextPage<Props> = ({blogs}) => {
   return (
-    <Layout>
-      <div>
-        <ul>
-          {blogs.map((blog) => (
-            <li key={blog.id}>
-              <Link href={`/blog/${blog.id}`}>
-                <a>{blog.title}</a>
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </Layout>
+    <div>
+      <ul>
+        {/* {blogs.map((blog) => (
+          <li key={blog.id}>
+            <Link href={`/blog/${blog.id}`}>
+              <a>{blog.title}</a>
+            </Link>
+          </li>
+        ))} */}
+      </ul>
+    </div>
   );
 };
-export default Home;
+export default BlogList;
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
 
