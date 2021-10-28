@@ -31,13 +31,13 @@ const BlogList: NextPage<Props> = ({blogs}) => {
   return (
     <div>
       <ul>
-        {/* {blogs.map((blog) => (
+        {blogs.map((blog) => (
           <li key={blog.id}>
             <Link href={`/blog/${blog.id}`}>
               <a>{blog.title}</a>
             </Link>
           </li>
-        ))} */}
+        ))}
       </ul>
     </div>
   );
