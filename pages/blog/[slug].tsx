@@ -1,22 +1,25 @@
 import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
+import Layout from "../../components/Layout";
 
 type SingleBlogProps = {
   frontmatter: {
-    title: String
-    date: String
-  }
-  markdownBody: String
-}
+    title: String;
+    date: String;
+  };
+  markdownBody: String;
+};
 
 const SingleBlog = (props: SingleBlogProps) => {
   return (
-    <div>
-      <h1>{props.frontmatter.title}</h1>
-      <p>{props.frontmatter.date}</p>
-      {/* TODO: エラー直す */}
-      <ReactMarkdown children={props.markdownBody} />
-    </div>
+    <Layout>
+      <div>
+        <h2>{props.frontmatter.title}</h2>
+        <p>{props.frontmatter.date}</p>
+        {/* TODO: エラー直す */}
+        <ReactMarkdown children={props.markdownBody} />
+      </div>
+    </Layout>
   );
 };
 

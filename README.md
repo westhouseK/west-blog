@@ -2,9 +2,18 @@
 This repository is my blog source.
 
 # reference
-- microCMS公式　Next.js × microCMS
-https://blog.microcms.io/microcms-next-jamstack-blog/
+## 公式
+- Next.js
+https://nextjs.org/docs/getting-started
+- gray-matter markdownを解析する
+https://www.npmjs.com/package/gray-matter
 
-- 実装例
-https://zenn.dev/rokki188/articles/948d53199508c7
-https://zenn.dev/hiro08gh/articles/a953f46a839ee7
+
+## 実装例
+- 画像を取得する
+https://kenzoblog.vercel.app/posts/nextjs-blog-asset
+
+
+##　資料
+- アイコン
+https://iconbox.fun/%e5%ae%b6%e3%81%ae%e7%84%a1%e6%96%99%e3%82%a2%e3%82%a4%e3%82%b3%e3%83%b35/

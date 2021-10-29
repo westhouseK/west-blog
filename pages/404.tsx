@@ -1,9 +1,11 @@
-const Custom404 = () => {
-  return (
-    <main>
+import Layout from "../components/Layout";
+
+const Custom404 = () => (
+  <Layout>
+    <>
       <p>ページがありません。</p>
-    </main>
-  );
-};
+    </>
+  </Layout>
+);
 
 export default Custom404;

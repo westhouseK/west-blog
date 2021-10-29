@@ -1,22 +1,5 @@
-.header {
-  width: 100%;
-  height: 5%;
-  position: sticky;
-  top: 0;
-  background-color: white;
-}
-
-.nav_container, .main_container{
-  max-width: 960px;
+.main_container {
+  max-width: 1200px;
   margin: 0 auto;
-}
-
-.nav {
-
-}
-
-
-.main_title {
-  margin: 0px;
-  padding: 0.5em 0;
+  padding: 0 2rem;
 }
