@@ -1,41 +1,48 @@
+import matter from "gray-matter";
 import Link from "next/link";
-import { client } from "../libs/client";
-import { GetStaticProps, NextPage } from "next";
-import Layout from "../components/Layout";
-import { Blog } from "../interfaces/BlogInterface";
-import { Responce } from "../interfaces/ResponceInterface";
-import styles from "../styles/index.module.css";
 
-type Props = {
-  blogs: Blog[]
-}
-
-const Home: NextPage<Props> = ({ blogs }) => {
+const Blog = (props) => {
   return (
-    <Layout>
-      <div className={styles.aaa}>
-        <ul>
-          {blogs.map((blog) => (
-            <li key={blog.id}>
-              <Link href={`/blog/${blog.id}`}>
-                <a>{blog.title}</a>
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </Layout>
+    <div>
+      <h1>ブログ一覧ページ</h1>
+      <ul>
+        {props.blogs.map((blog) => (
+          <li key={blog.slug}>
+            <Link href={`/blog/${blog.slug}`}>
+              <a>{blog.slug}</a>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 };
-export default Home;
 
-export const getStaticProps: GetStaticProps<Props> = async () => {
-  const data: Responce<Blog> = await client.get({ endpoint: "blogs" }); // TODO: エンドポイントの一覧作る
-  console.log(data);
+export default Blog;
+
+export async function getStaticProps() {
+  const blogs = ((context) => {
+    const keys = context.keys();
+    const values = keys.map(context);
+    const data = keys.map((key, index) => {
+      let slug = key.replace(/^.*[\\\/]/, "").slice(0, -3);
+      const value = values[index];
+      const document = matter(value.default);
+      return {
+        frontmatter: document.data,
+        slug: slug,
+      };
+    });
+    return data;
+  })(require.context("../contents", true, /\.md$/)); // TODO: 原因不明を直す
+
+  const sortingArticles = blogs.sort((a, b) => {
+    return b.frontmatter.id - a.frontmatter.id;
+  });
 
   return {
     props: {
-      blogs: data.contents,
+      blogs: JSON.parse(JSON.stringify(sortingArticles)),
     },
   };
-};
+}
