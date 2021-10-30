@@ -1,0 +1,5 @@
+.container {
+  display: block;
+  width: 400px; /* 要調整 */
+  max-width: 34%;
+}

@@ -1,6 +1,6 @@
 import Header from "./Header";
 import Footer from "./Footer";
-import styles from "../styles/layout.module.css";
+import styles from "../styles/Layout.module.css";
 
 const Layout: React.FC = ({ children }) => {
   return (

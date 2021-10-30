@@ -1,19 +1,19 @@
-.container {
-  width: calc(45% - 0.7em); /* TODO: 後で調整*/
+.card {
+  width: 48%; /* TODO: 後で調整*/
+  padding-bottom: 30px;
 }
 
 .link {
   display: block;
   height: 100%;
-  padding: 1em;
   text-decoration: none;
   box-shadow: 0 3px 15px rgb(0 0 0 / 15%);
-  transition-duration: 0.2s;
+  transition-duration: 0.3s;
 }
 
 .link:hover {
   transform: translateY(-5px);
-  transition-duration: 0.2s;
+  transition-duration: 0.3s;
 }
 
 .link:hover .image {
@@ -46,6 +46,10 @@
   padding-right: 4px;
   width: 20px;
   height: 20px;
+}
+
+.seciton {
+  padding: 0 1em 1em 1em
 }
 
 .time {

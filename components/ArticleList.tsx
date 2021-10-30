@@ -1,8 +1,8 @@
-// 記事の一覧を表示する
-const ArticleList = ({children}) => (
-  <div className="article_list">
-    {children}
-  </div>
-)
+import styles from "../styles/ArticleList.module.css";
 
-export default ArticleList
+// 記事の一覧を表示する
+const ArticleList = ({ children }) => (
+  <div className={styles.article_list}>{children}</div>
+);
+
+export default ArticleList;

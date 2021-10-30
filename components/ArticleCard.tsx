@@ -3,33 +3,32 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import styles from "../styles/ArticleCard.module.css";
 
-
 const ArticleCard = () => (
-  <article className={styles.container}>
+  <article className={styles.card}>
     <a className={styles.link} title="test">
       <figure className={styles.figure}>
-        <img
+        <Image
           className={styles.image}
-          src="https://lalafinland.com/wp-content/uploads/2021/07/IMG_6375-485x300.jpg"
+          src="/image/1.png"
           alt="test"
+          width={485}
+          height={300}
         />
         <div className={styles.category}>
           <FontAwesomeIcon className={styles.category_icon} icon={faTag} />
           <span>category</span>
         </div>
       </figure>
-      <section>
-        <h2 className={styles.title}>
-          エスポーの森の中の夏限定カフェ「Kahvila Aiju」
-        </h2>
+      <section className={styles.seciton}>
+        <h2 className={styles.title}>【初学者向け】React入門</h2>
         <div className={styles.time}>
           <FontAwesomeIcon className={styles.category_icon} icon={faClock} />
           <time className={styles.time_meta}>2021.10.30</time>
         </div>
         <div className={styles.description}>
-          フィンランドの夏の楽しみのひとつは、夏限定のカフェを訪れること。
-          ヘルシンキのお隣の都市エスポーに今年の夏オープンした夏限定のカフェがとってもすてきな場所だったので、今回ご紹介したいと思います。
-          自然保護区内の歴史的な公...
+          React コンポーネントを作成するには render()
+          メソッドを実装します。このメソッドは、受け取った入力データを元に、表示する内容を返す役割を担当します。次の例では
+          JSX ...
         </div>
       </section>
     </a>

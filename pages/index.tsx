@@ -2,11 +2,22 @@ import matter from "gray-matter";
 import Link from "next/link";
 import ArticleCard from "../components/ArticleCard";
 import ArticleList from "../components/ArticleList";
+import Sidebar from "../components/Sidebar";
+import styles from "../styles/Index.module.css"; // あんまり良いやり方ではないかも
 
+// TODO: Blogって良くない気がする
 const Blog = (props) => {
   return (
-    <ArticleList>
-      <ArticleCard />
+    <>
+      <div className={styles.content}>
+        <ArticleList>
+          <ArticleCard />
+          <ArticleCard />
+          <ArticleCard />
+          <ArticleCard />
+        </ArticleList>
+        <Sidebar />
+      </div>
       <ul>
         {props.blogs.map((blog) => (
           <li key={blog.slug}>
@@ -16,7 +27,7 @@ const Blog = (props) => {
           </li>
         ))}
       </ul>
-    </ArticleList>
+    </>
   );
 };
 

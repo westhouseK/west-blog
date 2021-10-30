@@ -1,12 +1,12 @@
 import Head from "next/head";
 import Link from "next/link";
-import styles from "../styles/header.module.css";
+import styles from "../styles/Header.module.css";
 
 const Header = () => (
   <>
     <Head>
       <title>west-blog</title>
-      <link rel="icon" href="/favicon.svg" />
+      <link rel="icon" href="/image/favicon.svg" />
     </Head>
 
     <header className={styles.header}>

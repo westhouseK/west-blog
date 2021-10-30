@@ -1,0 +1,41 @@
+.container {
+  padding-left: 40px;
+}
+
+.title {
+  color: #fff;
+  background-color: #000;
+  display: block;
+  line-height: 40px;
+  min-height: 40px;
+  padding: 0 10px;
+}
+
+.contents {
+  padding: 0 10px;
+}
+
+.profile {
+  text-align: center;
+  padding: 12px 0;
+}
+
+.profile_image {
+  border-radius: 50%;
+  /* デフォルトのstyleを上書きする */
+  border: solid 1px black !important;
+}
+
+.name {
+  text-align: center;
+}
+
+.description {
+  font-size: 85%;
+  padding: 15px 0;
+}
+
+/* TODO: 共通化？ */
+.pb-1 {
+  padding-bottom: 10px;
+}
