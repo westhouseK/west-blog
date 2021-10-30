@@ -1,7 +1,11 @@
-import '../styles/globals.css'
+import "../styles/globals.css";
+import "modern-css-reset/dist/reset.min.css"; // リセットCSSを読み込む
+import Layout from "../components/Layout";
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
-}
+const MyApp = ({ Component, pageProps }) => (
+  <Layout>
+    <Component {...pageProps} />
+  </Layout>
+);
 
-export default MyApp
+export default MyApp;

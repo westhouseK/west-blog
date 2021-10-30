@@ -1,11 +1,12 @@
 import matter from "gray-matter";
 import Link from "next/link";
-import Layout from "../components/Layout";
+import ArticleCard from "../components/ArticleCard";
+import ArticleList from "../components/ArticleList";
 
 const Blog = (props) => {
   return (
-    <Layout>
-      <h2>ブログ一覧ページ</h2>
+    <ArticleList>
+      <ArticleCard />
       <ul>
         {props.blogs.map((blog) => (
           <li key={blog.slug}>
@@ -15,7 +16,7 @@ const Blog = (props) => {
           </li>
         ))}
       </ul>
-    </Layout>
+    </ArticleList>
   );
 };
 

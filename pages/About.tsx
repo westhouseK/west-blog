@@ -1,10 +1,10 @@
 import Layout from "../components/Layout";
 
 const About = () => (
-  <Layout>
+  <>
     <h2>About</h2>
-    <>初めまして。うえすとと申します。</>
-  </Layout>
+    <div>初めまして。うえすとと申します。</div>
+  </>
 );
 
 export default About;

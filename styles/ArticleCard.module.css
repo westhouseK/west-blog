@@ -1,0 +1,61 @@
+.container {
+  width: calc(45% - 0.7em); /* TODO: 後で調整*/
+}
+
+.link {
+  display: block;
+  height: 100%;
+  padding: 1em;
+  text-decoration: none;
+  box-shadow: 0 3px 15px rgb(0 0 0 / 15%);
+  transition-duration: 0.2s;
+}
+
+.link:hover {
+  transform: translateY(-5px);
+  transition-duration: 0.2s;
+}
+
+.link:hover .image {
+  opacity: 0.8;
+}
+
+.figure {
+  position: relative;
+  text-align: center;
+}
+
+.image {
+  width: 485px;
+  height: 300px;
+}
+
+.category {
+  opacity: 0.88;
+  background-color: #99ccc6;
+  color: #3e3e3e;
+  position: absolute;
+  top: -0.1px;
+  right: 0;
+  display: flex;
+  align-items: center;
+  padding: 0 5px;
+}
+
+.category_icon {
+  padding-right: 4px;
+  width: 20px;
+  height: 20px;
+}
+
+.time {
+  font-size: 75%;
+  display: flex;
+  align-items: center;
+}
+
+.time_icon {
+  padding-right: 4px;
+  width: 20px;
+  height: 20px;
+}
