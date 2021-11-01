@@ -1,6 +1,7 @@
 import styles from "../styles/SidebarAbout.module.css";
 import Image from "next/image";
 
+// マークダウンにする
 const SidebarAbout = () => (
   <div className={styles.container}>
     <h3 className={styles.title}>About</h3>

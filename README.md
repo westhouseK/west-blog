@@ -16,6 +16,9 @@ This repository is my blog source.
 - 画像を取得する
   https://kenzoblog.vercel.app/posts/nextjs-blog-asset
 
+- ブログの一覧を取得する
+https://tamalog.szmd.jp/next-markdown-blog/
+
 ##　資料
 
 - アイコン

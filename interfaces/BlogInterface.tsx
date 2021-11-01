@@ -1,8 +1,9 @@
-import { DefalultResponceType } from "./ResponceInterface";
-
-export type Blog = DefalultResponceType & {
-  title: string;
-  body: string;
-  category: string;
-};
-
+export type BlogData = {
+  createdAt: string,
+  updatedAt: string,
+  title: string,
+  category: string,
+  tags: string[],
+  summary: string,
+  content: string,
+}
